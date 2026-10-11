@@ -26,16 +26,18 @@ export default function Home() {
     <main className="min-h-screen bg-brand-cream">
       {/* SECTION 1 HERO, full-bleed photo */}
       <section className="relative min-h-[100svh] flex items-end overflow-hidden -mt-[calc(4.75rem+env(safe-area-inset-top,0px))] lg:-mt-[7.25rem] lg:items-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={HERO_SLIDES[0].src}
-          alt={HERO_SLIDES[0].alt}
-          className="absolute inset-0 h-full w-full object-cover object-[32%_18%] sm:object-[36%_center] lg:object-[38%_center]"
-          fetchPriority="high"
-        />
-        {/* Mild plum wash + mobile bottom fade for copy */}
+        <picture>
+          <source media="(max-width: 767px)" srcSet={HERO_SLIDES[0].mobileSrc} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={HERO_SLIDES[0].src}
+            alt={HERO_SLIDES[0].alt}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            fetchPriority="high"
+          />
+        </picture>
         <div
-          className="absolute inset-0 bg-[rgba(20,43,74,0.28)]"
+          className="absolute inset-0 bg-[rgba(20,43,74,0.18)]"
           aria-hidden
         />
         <div
@@ -43,7 +45,7 @@ export default function Home() {
           aria-hidden
         />
         <div
-          className="absolute inset-0 lg:hidden bg-gradient-to-t from-[rgba(20,43,74,0.88)] via-[rgba(20,43,74,0.45)] to-[rgba(20,43,74,0.12)]"
+          className="absolute inset-0 lg:hidden bg-gradient-to-t from-[rgba(20,43,74,0.85)] via-[rgba(20,43,74,0.3)] to-transparent"
           aria-hidden
         />
 

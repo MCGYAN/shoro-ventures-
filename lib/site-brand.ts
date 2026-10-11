@@ -37,13 +37,14 @@ export function resolveSiteLogo(cmsValue?: string | null): string {
 }
 
 export const OG_IMAGE_PATH = '/og-image.png';
-export const HERO_IMAGE_VERSION = '3';
+export const HERO_IMAGE_VERSION = '4';
 export const HERO_IMAGE_PATH = `/hero.jpg?v=${HERO_IMAGE_VERSION}`;
 
 export const HERO_SLIDES = [
   {
     src: `/hero.jpg?v=${HERO_IMAGE_VERSION}`,
-    alt: 'Well-dressed man in a tailored outfit and leather shoes from Shoro Ventures',
+    mobileSrc: `/hero-mobile.jpg?v=${HERO_IMAGE_VERSION}`,
+    alt: 'Shoro Ventures slip-on shoes, shirts, denim and a watch styled on sunlit stone steps',
   },
 ] as const;
 

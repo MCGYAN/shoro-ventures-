@@ -144,22 +144,4 @@ await sharp({ create: { width: 1200, height: 630, channels: 4, background: NAVY_
   .png()
   .toFile('public/og-image.png');
 
-const heroMark = await sharp(markGold).resize(760, 760, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-  .ensureAlpha(0.07)
-  .png()
-  .toBuffer();
-const heroMarkFaint = await sharp(heroMark).composite([{
-  input: Buffer.from([255, 255, 255, 18]), raw: { width: 1, height: 1, channels: 4 }, tile: true, blend: 'dest-in',
-}]).png().toBuffer();
-await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080">
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#1E3D66"/><stop offset="60%" stop-color="${NAVY_HEX}"/><stop offset="100%" stop-color="#0B1A2E"/>
-  </linearGradient></defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect x="0" y="1072" width="1920" height="8" fill="${GOLD_HEX}" opacity="0.6"/>
-</svg>`))
-  .composite([{ input: heroMarkFaint, left: 1060, top: 160 }])
-  .jpeg({ quality: 85 })
-  .toFile('public/hero.jpg');
-
 console.log('Logo assets generated from', SRC, { bands, size: [W, H] });
