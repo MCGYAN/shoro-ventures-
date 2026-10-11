@@ -14,7 +14,6 @@ const SessionTimeoutWarning = dynamic(() => import('@/components/SessionTimeoutW
 const PWAPrompt = dynamic(() => import('@/components/PWAPrompt'), { ssr: false });
 const PWAInstaller = dynamic(() => import('@/components/PWAInstaller'), { ssr: false });
 const PWASplash = dynamic(() => import('@/components/PWASplash'), { ssr: false });
-const PushNotificationManager = dynamic(() => import('@/components/PushNotificationManager'), { ssr: false });
 const OfflineIndicator = dynamic(() => import('@/components/OfflineIndicator'), { ssr: false });
 const NetworkStatusMonitor = dynamic(() => import('@/components/NetworkStatusMonitor'), { ssr: false });
 const UpdatePrompt = dynamic(() => import('@/components/UpdatePrompt'), { ssr: false });
@@ -43,7 +42,6 @@ export default function StoreLayout({
         <Footer />
         <SessionTimeoutWarning />
         <PWAPrompt />
-        <PushNotificationManager />
         <OfflineIndicator />
         <NetworkStatusMonitor />
         <UpdatePrompt />
