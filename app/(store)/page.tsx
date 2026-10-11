@@ -128,10 +128,10 @@ export default function Home() {
       {/* SECTION 4, FEATURED PRODUCTS */}
       <section id="featured-products" className="pt-6 pb-10 sm:py-16 md:py-24 bg-brand-cream lg:bg-white/60 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MobileSectionHeader eyebrow="Best Sellers" title="The Essentials" href="/shop" />
+          <MobileSectionHeader eyebrow="Best Sellers" title="Featured Products" href="/shop" />
           <AnimatedSection className="hidden lg:block text-center mb-16">
             <span className="boutique-section-eyebrow">Best Sellers</span>
-            <h2 className="boutique-section-title mb-3">The Essentials</h2>
+            <h2 className="boutique-section-title mb-3">Featured Products</h2>
             <p className="text-brand-plum/70 max-w-xl mx-auto text-base">
               Our most-wanted pieces, chosen by men who know what looks good.
             </p>
