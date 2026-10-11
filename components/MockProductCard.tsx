@@ -33,7 +33,7 @@ export default function MockProductCard({
     <article className="group flex flex-col h-full boutique-card-hover">
       <Link
         href={productHref}
-        className="relative block aspect-[3/4] rounded-2xl overflow-hidden border border-brand-rose/10 bg-brand-latte/20 mb-3 shadow-sm transition-all duration-500 ease-boutique active:shadow-boutique active:scale-[0.98] boutique-image-zoom md:glass-card md:border-white/40 md:mb-4 md:group-hover:shadow-boutique-glow md:group-hover:border-brand-rose/20"
+        className="relative block aspect-[3/4] rounded-[1.25rem] overflow-hidden bg-white mb-3 shadow-[0_6px_20px_-8px_rgba(20,43,74,0.22)] transition-all duration-500 ease-boutique active:scale-[0.97] boutique-image-zoom md:rounded-2xl md:shadow-sm md:border md:glass-card md:border-white/40 md:mb-4 md:group-hover:shadow-boutique-glow md:group-hover:border-brand-rose/20"
       >
         {hasImage ? (
           <Image src={image} alt={name} fill className="boutique-img-target object-cover object-top" sizes="(max-width: 768px) 50vw, 25vw" />
@@ -51,15 +51,18 @@ export default function MockProductCard({
         )}
 
         {onSale && (
-          <span className="absolute top-2.5 left-2.5 z-[2] px-2.5 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.14em] bg-brand-rose/90 backdrop-blur-md text-white border border-white/20">
-            Sale
+          <span className="absolute top-2.5 left-2.5 z-[2] px-2.5 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.14em] bg-brand-plum text-brand-gold">
+            -{Math.round((1 - price / originalPrice!) * 100)}%
           </span>
         )}
 
-        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-brand-rose/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-active:opacity-100 group-hover:opacity-100 pointer-events-none" />
+        <div className="hidden md:block absolute inset-0 z-[1] bg-gradient-to-t from-brand-rose/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
 
-        {/* Mobile + desktop tap/hover cue */}
-        <div className="absolute bottom-3 left-3 right-3 z-[2] opacity-0 translate-y-2 group-active:opacity-100 group-active:translate-y-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-boutique">
+        <span className="md:hidden absolute bottom-2.5 right-2.5 z-[2] w-9 h-9 rounded-full bg-white/90 backdrop-blur-md text-brand-plum flex items-center justify-center shadow-[0_2px_8px_rgba(20,43,74,0.15)]" aria-hidden>
+          <i className="ri-arrow-right-up-line text-base" />
+        </span>
+
+        <div className="hidden md:block absolute bottom-3 left-3 right-3 z-[2] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-boutique">
           <span className="block w-full text-center py-2 rounded-full boutique-category-name-glass boutique-category-name-glass--overlay text-brand-plum text-[10px] font-semibold uppercase tracking-[0.18em]">
             Shop now
           </span>
@@ -67,19 +70,19 @@ export default function MockProductCard({
       </Link>
 
       <div className="flex flex-col flex-grow px-1">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-sage/90 mb-1.5 transition-colors duration-300 group-hover:text-brand-rose">
+        <p className="text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-plum/45 mb-1 md:mb-1.5 transition-colors duration-300 group-hover:text-brand-rose">
           {category}
         </p>
         <Link href={productHref} className="block">
-          <h3 className="font-serif text-lg md:text-xl leading-snug text-brand-plum mb-1 transition-colors duration-300 group-hover:text-brand-rose line-clamp-2">
+          <h3 className="font-serif text-[0.95rem] md:text-xl leading-snug text-brand-plum mb-1 transition-colors duration-300 group-hover:text-brand-rose line-clamp-1 md:line-clamp-2">
             {name}
           </h3>
         </Link>
         {tagline && (
-          <p className="text-[11px] text-brand-plum/50 mb-3 leading-relaxed line-clamp-2">{tagline}</p>
+          <p className="hidden md:block text-[11px] text-brand-plum/50 mb-3 leading-relaxed line-clamp-2">{tagline}</p>
         )}
-        <div className="flex items-baseline gap-2 mt-auto pt-1">
-          <span className="font-semibold text-brand-plum tracking-tight">{formatPrice(price)}</span>
+        <div className="flex items-baseline gap-2 mt-auto pt-0.5 md:pt-1">
+          <span className="font-semibold text-sm md:text-base text-brand-plum tracking-tight">{formatPrice(price)}</span>
           {onSale && (
             <span className="text-xs text-brand-plum/40 line-through">{formatPrice(originalPrice!)}</span>
           )}

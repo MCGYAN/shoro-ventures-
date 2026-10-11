@@ -52,12 +52,12 @@ export default function MobileBottomNav() {
       className="lg:hidden mobile-bottom-nav-fixed"
       aria-label="Mobile navigation"
     >
-      <div className="mobile-bottom-nav-glass border-t border-brand-rose/15">
-        <div
-          className={`grid grid-cols-5 pt-1.5 px-0.5 ${
-            isStandalone ? 'pb-[max(0.35rem,env(safe-area-inset-bottom))]' : 'pb-1.5'
-          }`}
-        >
+      <div
+        className={`px-3 ${
+          isStandalone ? 'pb-[max(0.75rem,env(safe-area-inset-bottom))]' : 'pb-3'
+        }`}
+      >
+        <div className="mobile-bottom-nav-glass mx-auto max-w-md grid grid-cols-5 p-1.5">
           {NAV_ITEMS.map((item) => {
             const active = isActive(item.href);
             const badge =
@@ -67,33 +67,25 @@ export default function MobileBottomNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex flex-col items-center justify-center py-2 min-h-[56px] relative transition-colors active:opacity-80 ${
-                  active ? 'text-brand-plum' : 'text-brand-plum/45'
-                }`}
+                className="flex flex-col items-center justify-center gap-0.5 h-[3.4rem] rounded-[1.35rem] relative active:scale-95 transition-transform duration-200"
                 aria-label={item.label}
                 aria-current={active ? 'page' : undefined}
               >
-                {active && (
-                  <span
-                    className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-brand-plum"
-                    aria-hidden
-                  />
-                )}
-
-                <div className="relative flex items-center justify-center w-9 h-9 mt-1">
-                  <i
-                    className={`${active ? item.iconActive : item.iconInactive} text-[23px] leading-none`}
-                  />
+                <span
+                  className={`relative flex items-center justify-center h-8 rounded-full transition-all duration-300 ease-boutique ${
+                    active ? 'w-12 bg-brand-plum text-brand-gold shadow-[0_4px_12px_rgba(20,43,74,0.3)]' : 'w-8 text-brand-plum/45'
+                  }`}
+                >
+                  <i className={`${active ? item.iconActive : item.iconInactive} text-[19px] leading-none`} />
                   {badge > 0 && (
-                    <span className="absolute -top-0.5 -right-2 min-w-[15px] h-[15px] bg-brand-plum text-brand-cream text-[8px] font-bold rounded-full flex items-center justify-center px-0.5">
+                    <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-1 bg-brand-gold text-brand-plum text-[9px] font-bold rounded-full flex items-center justify-center ring-2 ring-white">
                       {badge > 99 ? '99+' : badge}
                     </span>
                   )}
-                </div>
-
+                </span>
                 <span
-                  className={`text-[10px] font-medium mt-0.5 tracking-wide ${
-                    active ? 'text-brand-plum' : 'text-brand-plum/50'
+                  className={`text-[10px] tracking-wide transition-colors ${
+                    active ? 'text-brand-plum font-semibold' : 'text-brand-plum/45 font-medium'
                   }`}
                 >
                   {item.label}

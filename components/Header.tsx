@@ -1,8 +1,9 @@
 'use client';
 
-import { SITE_NAME, HEADER_LOGO_PATH } from '@/lib/site-brand';
+import { SITE_NAME, HEADER_LOGO_PATH, HEADER_LOGO_LIGHT_PATH } from '@/lib/site-brand';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { createPortal } from 'react-dom';
 import MiniCart from './MiniCart';
 import { useCart } from '@/context/CartContext';
@@ -29,6 +30,8 @@ export default function Header() {
   const { getSetting } = useCMS();
 
   const siteName = getSetting('site_name') || SITE_NAME;
+  const pathname = usePathname();
+  const overHero = pathname === '/' && !scrolled;
 
   useEffect(() => {
     setMounted(true);
@@ -88,13 +91,21 @@ export default function Header() {
   };
 
   const iconBtn =
-    'h-10 w-10 rounded-full flex items-center justify-center text-brand-plum transition-all duration-300 max-lg:bg-white/80 max-lg:border max-lg:border-brand-plum/10 lg:glass-pill lg:border-white/40 hover:text-brand-plum active:scale-95';
+    'h-10 w-10 rounded-full flex items-center justify-center text-brand-plum transition-all duration-300 lg:glass-pill lg:border-white/40 hover:text-brand-plum active:scale-95';
+
+  const mobileIconBtn = `h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300 active:scale-90 ${
+    overHero
+      ? 'text-white bg-white/10 border border-white/25 backdrop-blur-md'
+      : 'text-brand-plum bg-white border border-brand-plum/[0.08] shadow-[0_2px_10px_rgba(20,43,74,0.06)]'
+  }`;
 
   const headerContent = (
     <>
       <header
         data-store-header
         className={`store-header-fixed mobile-header-glass safe-area-top transition-all duration-300 lg:duration-500 lg:ease-boutique ${
+          overHero ? 'mobile-header-clear' : ''
+        } ${
           scrolled ? 'lg:glass-frosted lg:border-white/40 lg:shadow-boutique' : 'lg:glass-cream lg:border-brand-rose/20'
         }`}
       >
@@ -104,20 +115,20 @@ export default function Header() {
             <div className="lg:hidden flex items-center justify-between h-[4.75rem] gap-2">
               <Link href="/" className="flex shrink-0 select-none min-w-0" aria-label="Go to homepage">
                 <img
-                  src={HEADER_LOGO_PATH}
+                  src={overHero ? HEADER_LOGO_LIGHT_PATH : HEADER_LOGO_PATH}
                   alt={siteName}
-                  className="h-[3.85rem] w-auto max-w-[min(58vw,220px)] object-contain object-left"
+                  className="h-[3.1rem] w-auto max-w-[min(52vw,190px)] object-contain object-left"
                 />
               </Link>
-              <div className="flex items-center justify-end gap-1 shrink-0">
-                <button className={iconBtn} onClick={() => setIsSearchOpen(true)} aria-label="Search">
-                  <i className="ri-search-line text-xl" />
+              <div className="flex items-center justify-end gap-2 shrink-0">
+                <button className={mobileIconBtn} onClick={() => setIsSearchOpen(true)} aria-label="Search">
+                  <i className="ri-search-2-line text-[19px]" />
                 </button>
                 <div className="relative">
-                  <button className={iconBtn} onClick={() => setIsCartOpen(!isCartOpen)} aria-label="Cart">
-                    <i className="ri-shopping-bag-3-line text-xl" />
+                  <button className={mobileIconBtn} onClick={() => setIsCartOpen(!isCartOpen)} aria-label="Cart">
+                    <i className="ri-shopping-bag-3-line text-[19px]" />
                     {cartCount > 0 && (
-                      <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand-plum text-[10px] font-bold text-brand-cream">
+                      <span className="absolute -top-1 -right-1 flex h-[18px] min-w-[18px] px-1 items-center justify-center rounded-full bg-brand-gold text-[10px] font-bold text-brand-plum ring-2 ring-white">
                         {cartCount}
                       </span>
                     )}

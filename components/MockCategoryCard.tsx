@@ -16,9 +16,9 @@ export default function MockCategoryCard({ label, href, image = '', index = 0 }:
   return (
     <Link
       href={href}
-      className="group flex flex-col rounded-xl overflow-hidden border border-brand-rose/15 bg-white shadow-sm transition-shadow duration-500 active:shadow-boutique md:rounded-2xl md:glass-card md:border-white/40 boutique-card-hover"
+      className="group flex flex-col rounded-[1.25rem] overflow-hidden bg-white shadow-[0_6px_20px_-6px_rgba(20,43,74,0.25)] transition-all duration-500 active:scale-[0.97] md:rounded-2xl md:shadow-sm md:glass-card md:border md:border-white/40 boutique-card-hover"
     >
-      <div className="relative aspect-[4/5] md:aspect-[3/4] bg-gradient-to-b from-brand-latte to-brand-champagne/60 boutique-image-zoom overflow-hidden">
+      <div className="relative aspect-[3/4] bg-gradient-to-b from-brand-latte to-brand-champagne/60 boutique-image-zoom overflow-hidden">
         {hasImage ? (
           <Image
             src={image}
@@ -50,12 +50,19 @@ export default function MockCategoryCard({ label, href, image = '', index = 0 }:
             <i className="ri-arrow-right-line" />
           </span>
         </div>
-      </div>
 
-      <div className="md:hidden px-3 py-3 text-center boutique-category-name-glass">
-        <span className="font-serif text-[13px] text-brand-plum leading-snug block truncate tracking-[0.04em] transition-transform duration-300 group-active:translate-x-0.5">
-          {label}
-        </span>
+        <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.82)] via-[rgba(10,22,40,0.1)] to-transparent" />
+        <div className="md:hidden absolute inset-x-0 bottom-0 p-3.5 flex items-end justify-between gap-2">
+          <div className="min-w-0">
+            <span className="block text-[9px] font-semibold uppercase tracking-[0.24em] text-brand-gold mb-1">
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            <span className="block font-serif text-[1.05rem] leading-tight text-white truncate">{label}</span>
+          </div>
+          <span className="w-8 h-8 shrink-0 rounded-full bg-white/15 border border-white/30 backdrop-blur-md flex items-center justify-center text-white">
+            <i className="ri-arrow-right-up-line text-sm" />
+          </span>
+        </div>
       </div>
     </Link>
   );

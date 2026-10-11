@@ -28,6 +28,7 @@ export const BUSINESS_COUNTRY = 'Ghana';
 export const LOGO_VERSION = '3';
 export const LOGO_PATH = `/logo.png?v=${LOGO_VERSION}`;
 export const HEADER_LOGO_PATH = `/logo-header.png?v=${LOGO_VERSION}`;
+export const HEADER_LOGO_LIGHT_PATH = `/logo-header-light.png?v=${LOGO_VERSION}`;
 export const FOOTER_LOGO_PATH = `/logo-footer.png?v=${LOGO_VERSION}`;
 
 export function resolveSiteLogo(cmsValue?: string | null): string {

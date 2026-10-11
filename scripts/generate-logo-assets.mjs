@@ -113,6 +113,7 @@ async function horizontal(colorFn) {
 
 await sharp(stackedLight).toFile('public/logo.png');
 await sharp(await horizontal(light)).toFile('public/logo-header.png');
+await sharp(await horizontal(dark)).toFile('public/logo-header-light.png');
 await sharp(stackedDark).toFile('public/logo-footer.png');
 
 const markNavy = await layer(markBox, () => NAVY);
