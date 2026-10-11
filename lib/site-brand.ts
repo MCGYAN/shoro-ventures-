@@ -25,7 +25,7 @@ export const BUSINESS_ADDRESS = 'YOUR_STREET_ADDRESS, YOUR_CITY';
 export const BUSINESS_CITY = 'YOUR_CITY';
 export const BUSINESS_COUNTRY = 'Ghana';
 
-export const LOGO_VERSION = '2';
+export const LOGO_VERSION = '3';
 export const LOGO_PATH = `/logo.png?v=${LOGO_VERSION}`;
 export const HEADER_LOGO_PATH = `/logo-header.png?v=${LOGO_VERSION}`;
 export const FOOTER_LOGO_PATH = `/logo-footer.png?v=${LOGO_VERSION}`;
@@ -37,7 +37,7 @@ export function resolveSiteLogo(cmsValue?: string | null): string {
 }
 
 export const OG_IMAGE_PATH = '/og-image.png';
-export const HERO_IMAGE_VERSION = '2';
+export const HERO_IMAGE_VERSION = '3';
 export const HERO_IMAGE_PATH = `/hero.jpg?v=${HERO_IMAGE_VERSION}`;
 
 export const HERO_SLIDES = [

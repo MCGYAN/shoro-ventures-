@@ -24,7 +24,6 @@
     "db:migrate": "node scripts/run-migration.mjs",
     "create-admin": "node scripts/create-admin-user.mjs",
     "assets:logo": "node scripts/generate-logo-assets.mjs",
-    "assets:brand": "node scripts/process-brand-assets.mjs",
     "vercel": "vercel -Q ./.vercel-cli-config"
   },
   "dependencies": {

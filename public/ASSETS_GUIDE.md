@@ -1,26 +1,20 @@
-# Asset Replacement Guide
+# Asset Guide
 
-Logos, icons, favicons, the OG image and the hero background are generated from the Shoro Ventures SV monogram by `npm run assets:logo` (`scripts/generate-logo-assets.mjs`). `public/logo.svg` and `public/logo-mark.svg` are the vector masters for print, packaging and tags. Replace `hero.jpg` with a real lifestyle photo when available.
+`/public/logo-source.png` is the master Shoro Ventures logo (single-colour artwork on a flat background, stacked as monogram / SHORO / VENTURES). `npm run assets:logo` (`scripts/generate-logo-assets.mjs`) turns it into every file below. To update the logo, replace `logo-source.png` (ideally higher resolution, same layout) and re-run the command.
 
-| File | Size | Purpose |
-|------|------|---------|
-| `/public/logo.png` | ~800×400px, transparent | Main logo (about page, structured data) |
-| `/public/logo-header.png` | ~800×400px, transparent | Header logo (on light background) |
-| `/public/logo-footer.png` | ~800×400px, transparent | Footer logo (on dark brand background) |
-| `/public/logo-mark.png` | 512×512px, transparent | Square emblem / monogram |
-| `/public/favicon.ico` + `/app/favicon.ico` | 32×32px | Browser tab icon |
-| `/public/favicon.png` | 32×32px | PNG favicon |
-| `/public/apple-touch-icon.png` | 180×180px | iOS home screen |
-| `/public/icon-192.png` | 192×192px | Android PWA |
-| `/public/icon-512.png` | 512×512px | PWA splash (maskable) |
-| `/public/og-image.png` | 1200×630px | Social share preview |
-| `/public/hero.jpg` | 1920×1080px | Homepage hero photo |
+| File | Purpose |
+|------|---------|
+| `/public/logo.png` | Stacked logo, navy + gold on transparent (about page, structured data) |
+| `/public/logo-header.png` | Horizontal lockup, navy + gold (header) |
+| `/public/logo-footer.png` | Stacked logo, white + gold (navy footer) |
+| `/public/logo-mark.png` | SV monogram, navy on transparent |
+| `/public/favicon.ico` + `/app/favicon.ico` + `/public/favicon.png` | Browser tab icon |
+| `/public/apple-touch-icon.png` | iOS home screen (180×180) |
+| `/public/icon-192.png` / `icon-512.png` | Android PWA icons |
+| `/public/og-image.png` | Social share preview (1200×630) |
+| `/public/hero.jpg` | Homepage hero background (replace with a real lifestyle photo when available) |
 
 After replacing logos or the hero, bump `LOGO_VERSION` / `HERO_IMAGE_VERSION` in `lib/site-brand.ts` to bust browser caches.
-
-## Generate logo variants automatically
-
-Drop a high-resolution logo on a black background at `/public/logo-source.png`, then run `npm run assets:brand`. It produces the header/footer logos, emblem, icons, favicon and OG image. Adjust the crop ratios and colours in `scripts/process-brand-assets.mjs` to suit your artwork.
 
 ## Tools
 
