@@ -230,7 +230,7 @@ export default function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Try oxfords, sneakers, shirts..."
+                  placeholder="Try slip-ons, loafers, knit..."
                   className="boutique-input pr-14 text-base"
                   autoFocus
                 />

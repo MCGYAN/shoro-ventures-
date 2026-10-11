@@ -57,27 +57,27 @@ export const DEFAULT_PRODUCT_BRAND = 'Shoro Ventures';
 export const CATALOG_PDF_PREFIX = 'shoro-ventures-catalog';
 
 export const SHOP_CATEGORIES = [
-  { label: 'Formal Shoes', href: '/shop?category=formal-shoes' },
-  { label: 'Sneakers', href: '/shop?category=sneakers' },
-  { label: 'Shirts', href: '/shop?category=shirts' },
-  { label: 'Trousers', href: '/shop?category=trousers' },
+  { label: 'Slip-Ons', href: '/shop?category=slip-ons' },
+  { label: 'Loafers', href: '/shop?category=loafers' },
+  { label: 'Knit Shoes', href: '/shop?category=knit-shoes' },
+  { label: 'Clothing', href: '/shop?category=clothing' },
 ] as const;
 
 export const CUSTOMER_REVIEWS = [
   {
-    text: 'The leather on my Oxfords is excellent and they were comfortable from day one. Wore them to a wedding and got compliments all night.',
+    text: 'The two-tone slip-ons were comfortable from day one. Wore them to the office and got compliments all week.',
     rating: 5,
   },
   {
-    text: 'Clean sneakers that actually go with everything. Fast delivery and the fit was exactly right.',
+    text: 'The knit slip-ons are so light I forget I have them on. Fast delivery and the size was exactly right.',
     rating: 5,
   },
   {
-    text: 'Finally a shirt that fits properly through the shoulders. The quality feels premium for the price.',
+    text: 'The olive loafers look even better in person. Solid sole, soft collar, great value for the price.',
     rating: 5,
   },
   {
-    text: 'Ordered on WhatsApp, got my chinos and loafers the next day. Shoro is my go-to now.',
+    text: 'Ordered on WhatsApp, got my loafers the next day. Shoro is my go-to for shoes now.',
     rating: 5,
   },
 ] as const;

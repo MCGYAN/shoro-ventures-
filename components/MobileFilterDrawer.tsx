@@ -14,7 +14,7 @@ export default function MobileFilterDrawer({ isOpen, onClose }: MobileFilterDraw
   const [selectedColors, setSelectedColors] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
-  const categories = ['Formal Shoes', 'Sneakers', 'Shirts', 'Trousers', 'New Arrivals'];
+  const categories = ['Slip-Ons', 'Loafers', 'Knit Shoes', 'Clothing'];
   const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
   const colors = [
     { name: 'Black', hex: '#000000' },

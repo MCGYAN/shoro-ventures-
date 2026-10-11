@@ -51,7 +51,7 @@ export default async function CategoriesPage() {
       <PageHero
         eyebrow="Collections"
         title="Shop by Category"
-        subtitle="Shop formal shoes, sneakers, shirts, trousers and more."
+        subtitle="Shop slip-ons, loafers, knit shoes and clothing."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -12,19 +12,19 @@ interface MobileSearchOverlayProps {
 export default function MobileSearchOverlay({ isOpen, onClose }: MobileSearchOverlayProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [recentSearches, setRecentSearches] = useState([
-    'Oxford Shoes',
-    'White Sneakers',
-    'Linen Shirt',
-    'Chinos'
+    'Slip-On',
+    'Loafer',
+    'Knit',
+    'Two-Tone'
   ]);
 
   const popularSearches = [
-    'New Arrivals',
-    'Sale Items',
-    'Formal Shoes',
-    'Sneakers',
-    'Shirts',
-    'Trousers'
+    'Slip-Ons',
+    'Loafers',
+    'Knit Shoes',
+    'Clothing',
+    'Black',
+    'Olive'
   ];
 
   const query = searchQuery.trim().toLowerCase();

@@ -86,7 +86,7 @@ export default function Home() {
             <span className="boutique-section-eyebrow">Explore</span>
             <h2 className="boutique-section-title mb-3">Shop By Category</h2>
             <p className="text-brand-plum/70 max-w-xl mx-auto text-sm sm:text-base px-1">
-              From polished formal shoes to everyday essentials, everything you need to look sharp.
+              Slip-ons, loafers, knit shoes and clothing, everything you need to look sharp.
             </p>
           </AnimatedSection>
           <AnimatedGrid className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-6">
@@ -113,8 +113,8 @@ export default function Home() {
               Our most-wanted pieces, chosen by men who know what looks good.
             </p>
           </AnimatedSection>
-          <AnimatedGrid className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6 md:gap-8">
-            {MOCK_FEATURED_PRODUCTS.map((product) => (
+          <AnimatedGrid className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
+            {MOCK_FEATURED_PRODUCTS.slice(0, 4).map((product) => (
               <MockProductCard
                 key={product.id}
                 slug={product.slug}
