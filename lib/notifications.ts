@@ -4,12 +4,13 @@ import { escapeHtml } from '@/lib/sanitize';
 
 const resend = new Resend(process.env.RESEND_API_KEY || 'missing_api_key');
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'support@example.com';
-const EMAIL_FROM = process.env.EMAIL_FROM || 'Storefront <support@example.com>';
+const EMAIL_FROM = process.env.EMAIL_FROM || 'Shoro Ventures <support@example.com>';
 const BRAND = {
-    name: process.env.NEXT_PUBLIC_SITE_NAME || 'YOUR_APP_TITLE',
-    color: '#2563eb',
-    colorLight: '#eff6ff',
-    colorDark: '#1e3a5f',
+    name: process.env.NEXT_PUBLIC_SITE_NAME || 'Shoro Ventures',
+    tagline: 'Style That Speaks.',
+    color: '#142B4A',
+    colorLight: '#F3F5F7',
+    colorDark: '#0B1A2E',
     url: (process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com').replace(/\/+$/, ''),
     phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || 'YOUR_PHONE_NUMBER',
 };
@@ -30,7 +31,7 @@ ${preheader ? `<span style="display:none;max-height:0;overflow:hidden;">${prehea
 <!-- Header -->
 <tr><td style="background:linear-gradient(135deg,${BRAND.color},${BRAND.colorDark});padding:32px 40px;text-align:center;">
 <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;">${BRAND.name}</h1>
-<p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">YOUR_TAGLINE</p>
+<p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">${BRAND.tagline}</p>
 </td></tr>
 
 <!-- Body -->
@@ -406,7 +407,7 @@ export async function sendWelcomeMessage(user: { email: string, firstName: strin
   <p style="margin:0;color:#6b7280;font-size:15px;">We're so glad you're here.</p>
 </div>
 
-<p style="color:#374151;font-size:14px;line-height:1.7;margin:16px 0;">Thank you for joining the ${BRAND.name} family. We offer quality products at competitive prices &mdash; for resellers and individual customers.</p>
+<p style="color:#374151;font-size:14px;line-height:1.7;margin:16px 0;">Thank you for joining the ${BRAND.name} family. We offer stylish shoes and clothing for men who value quality, comfort and a sharp appearance.</p>
 
 <div style="background-color:#f9fafb;border-radius:12px;padding:20px;margin:20px 0;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">

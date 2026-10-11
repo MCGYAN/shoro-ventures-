@@ -1,18 +1,18 @@
 /**
- * Brand identity & site copy — replace every YOUR_* placeholder (see CUSTOMIZE.md)
+ * Shoro Ventures, brand identity & site copy
  */
 
-export const SITE_NAME = 'YOUR_STORE_NAME';
-export const SITE_SHORT_NAME = 'YOUR_SHORT_NAME';
+export const SITE_NAME = 'Shoro Ventures';
+export const SITE_SHORT_NAME = 'Shoro';
 export const SITE_DESCRIPTION =
-  'YOUR_STORE_DESCRIPTION — one or two sentences describing what you sell and who it is for.';
-export const SITE_TAGLINE = 'Your tagline goes here.';
-export const SITE_HERO_TAGLINE = 'Your hero tagline.';
-export const SITE_LOCATION_TAGLINE = 'YOUR_CITY';
+  'Shoro Ventures is a modern fashion and lifestyle brand offering stylish shoes and clothing for men who value quality, comfort and a sharp appearance.';
+export const SITE_TAGLINE = 'Style That Speaks.';
+export const SITE_HERO_TAGLINE = 'Dressed with intent.';
+export const SITE_LOCATION_TAGLINE = "Men's Shoes & Clothing";
 
-export const HERO_HEADLINE = 'Your headline goes here.';
+export const HERO_HEADLINE = 'Style That Speaks.';
 export const HERO_SUBHEADLINE =
-  'A short line about your products and how customers can order, online, on WhatsApp or in store.';
+  'Quality shoes and clothing for men who show up looking sharp. Clean lines, premium comfort, a confident finish.';
 
 export const SITE_URL = 'https://yourdomain.com';
 export const CONTACT_EMAIL = 'hello@yourdomain.com';
@@ -25,7 +25,7 @@ export const BUSINESS_ADDRESS = 'YOUR_STREET_ADDRESS, YOUR_CITY';
 export const BUSINESS_CITY = 'YOUR_CITY';
 export const BUSINESS_COUNTRY = 'Ghana';
 
-export const LOGO_VERSION = '1';
+export const LOGO_VERSION = '2';
 export const LOGO_PATH = `/logo.png?v=${LOGO_VERSION}`;
 export const HEADER_LOGO_PATH = `/logo-header.png?v=${LOGO_VERSION}`;
 export const FOOTER_LOGO_PATH = `/logo-footer.png?v=${LOGO_VERSION}`;
@@ -37,13 +37,13 @@ export function resolveSiteLogo(cmsValue?: string | null): string {
 }
 
 export const OG_IMAGE_PATH = '/og-image.png';
-export const HERO_IMAGE_VERSION = '1';
+export const HERO_IMAGE_VERSION = '2';
 export const HERO_IMAGE_PATH = `/hero.jpg?v=${HERO_IMAGE_VERSION}`;
 
 export const HERO_SLIDES = [
   {
     src: `/hero.jpg?v=${HERO_IMAGE_VERSION}`,
-    alt: 'YOUR_HERO_IMAGE_DESCRIPTION',
+    alt: 'Well-dressed man in a tailored outfit and leather shoes from Shoro Ventures',
   },
 ] as const;
 
@@ -52,51 +52,50 @@ export const SOCIAL_FACEBOOK = '';
 export const SOCIAL_TIKTOK = '';
 export const SOCIAL_SNAPCHAT = '';
 
-export const DEFAULT_PRODUCT_BRAND = 'YOUR_STORE_NAME';
-export const CATALOG_PDF_PREFIX = 'store-catalog';
+export const DEFAULT_PRODUCT_BRAND = 'Shoro Ventures';
+export const CATALOG_PDF_PREFIX = 'shoro-ventures-catalog';
 
 export const FEATURED_BENEFITS = [
-  { label: 'Quality', title: 'Products You Can Trust' },
-  { label: 'Fast', title: 'Quick, Reliable Delivery' },
-  { label: 'Local', title: 'Easy In-Store Pickup' },
-  { label: 'Support', title: 'WhatsApp When You Need Us' },
+  { label: 'Quality', title: 'Built To Last, Made To Impress' },
+  { label: 'Comfort', title: 'All-Day Wear Without Compromise' },
+  { label: 'Style', title: 'Clean, Contemporary, Timeless' },
+  { label: 'Service', title: 'Order Online Or On WhatsApp' },
 ] as const;
 
 export const SHOP_CATEGORIES = [
-  { label: 'Category One', href: '/shop?category=category-one' },
-  { label: 'Category Two', href: '/shop?category=category-two' },
-  { label: 'Category Three', href: '/shop?category=category-three' },
-  { label: 'Category Four', href: '/shop?category=category-four' },
+  { label: 'Formal Shoes', href: '/shop?category=formal-shoes' },
+  { label: 'Sneakers', href: '/shop?category=sneakers' },
+  { label: 'Shirts', href: '/shop?category=shirts' },
+  { label: 'Trousers', href: '/shop?category=trousers' },
 ] as const;
 
 export const CUSTOMER_REVIEWS = [
   {
-    text: 'Replace this with a real customer review. Short, specific quotes work best.',
+    text: 'The leather on my Oxfords is excellent and they were comfortable from day one. Wore them to a wedding and got compliments all night.',
     rating: 5,
   },
   {
-    text: 'Another customer review about product quality or the buying experience.',
+    text: 'Clean sneakers that actually go with everything. Fast delivery and the fit was exactly right.',
     rating: 5,
   },
   {
-    text: 'A review that mentions delivery speed, pickup, or customer service.',
+    text: 'Finally a shirt that fits properly through the shoulders. The quality feels premium for the price.',
     rating: 5,
   },
   {
-    text: 'A review from a repeat customer explaining why they keep coming back.',
+    text: 'Ordered on WhatsApp, got my chinos and loafers the next day. Shoro is my go-to now.',
     rating: 5,
   },
 ] as const;
 
-export const ABOUT_HEADLINE = 'About Our Store';
+export const ABOUT_HEADLINE = 'Built For Men Who Mean Business';
 export const ABOUT_BODY =
-  'YOUR_ABOUT_TEXT — tell customers who you are, what you sell, where you are based and why they should shop with you. Order online, on WhatsApp, or visit us in store.';
+  'Shoro Ventures brings together stylish shoes and clothing for men who value quality, comfort and a good appearance. We pair a clean, professional look with a bold contemporary edge, so whether you are heading to the office, an event or the weekend, you walk in looking the part. Order online, on WhatsApp, or visit us in store.';
 
 export const BRAND_COLORS = {
-  plum: '#4A183D',
-  gold: '#D8B06A',
-  ivory: '#FFF8F2',
-  charcoal: '#1E1E1E',
-  blush: '#E8C7CF',
+  navy: '#142B4A',
+  gold: '#D4AF37',
   white: '#FFFFFF',
+  lightGrey: '#F3F5F7',
+  charcoal: '#1E1E1E',
 } as const;

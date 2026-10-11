@@ -18,10 +18,10 @@ export default function WhoWeAreSection() {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                <strong>{SITE_NAME}</strong> is your go-to store for quality products at fair prices. Visit us at {BUSINESS_ADDRESS}, or order online for delivery.
+                <strong>{SITE_NAME}</strong> is a modern fashion and lifestyle brand offering stylish shoes and clothing for men who value quality, comfort and a good appearance. Visit us at {BUSINESS_ADDRESS}, or order online for delivery.
               </p>
               <p>
-                Replace this paragraph with a short note about your values and what customers can expect when they shop with you.
+                We combine a clean, professional look with a bold contemporary feel, so you always step out looking confident and composed.
               </p>
               <div className="pt-4">
                 <Link 
@@ -56,7 +56,7 @@ export default function WhoWeAreSection() {
                   <i className="ri-medal-line text-xl"></i>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">Quality Guaranteed</p>
+                  <p className="font-bold text-gray-900">Premium Menswear</p>
                   <p className="text-sm text-gray-500">{SITE_TAGLINE}</p>
                 </div>
               </div>

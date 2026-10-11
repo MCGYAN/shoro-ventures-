@@ -35,15 +35,15 @@ export default function Home() {
         />
         {/* Mild plum wash + mobile bottom fade for copy */}
         <div
-          className="absolute inset-0 bg-[rgba(74,24,61,0.28)]"
+          className="absolute inset-0 bg-[rgba(20,43,74,0.28)]"
           aria-hidden
         />
         <div
-          className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[rgba(74,24,61,0.55)] via-[rgba(74,24,61,0.2)] to-transparent"
+          className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[rgba(20,43,74,0.55)] via-[rgba(20,43,74,0.2)] to-transparent"
           aria-hidden
         />
         <div
-          className="absolute inset-0 lg:hidden bg-gradient-to-t from-[rgba(74,24,61,0.88)] via-[rgba(74,24,61,0.45)] to-[rgba(74,24,61,0.12)]"
+          className="absolute inset-0 lg:hidden bg-gradient-to-t from-[rgba(20,43,74,0.88)] via-[rgba(20,43,74,0.45)] to-[rgba(20,43,74,0.12)]"
           aria-hidden
         />
 
@@ -61,9 +61,9 @@ export default function Home() {
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/shop"
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3.5 min-h-[48px] bg-brand-gold text-brand-plum rounded-full font-semibold text-sm tracking-wide shadow-boutique transition-all duration-300 hover:bg-[#e0c07a] active:scale-[0.98]"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3.5 min-h-[48px] bg-brand-gold text-brand-plum rounded-full font-semibold text-sm tracking-wide shadow-boutique transition-all duration-300 hover:bg-[#e0c158] active:scale-[0.98]"
               >
-                Shop now
+                Shop the collection
               </Link>
               <a
                 href={WHATSAPP_URL}
@@ -120,7 +120,7 @@ export default function Home() {
             <span className="boutique-section-eyebrow">Explore</span>
             <h2 className="boutique-section-title mb-3">Shop By Category</h2>
             <p className="text-brand-plum/70 max-w-xl mx-auto text-sm sm:text-base px-1">
-              Browse our collections and find exactly what you are looking for.
+              From polished formal shoes to everyday essentials, everything you need to look sharp.
             </p>
           </AnimatedSection>
           <AnimatedGrid className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-6">
@@ -141,10 +141,10 @@ export default function Home() {
       <section id="featured-products" className="py-12 sm:py-16 md:py-24 bg-white/60 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-8 sm:mb-12 md:mb-16">
-            <span className="boutique-section-eyebrow">Loved Right Now</span>
-            <h2 className="boutique-section-title mb-3">Featured Products</h2>
+            <span className="boutique-section-eyebrow">Best Sellers</span>
+            <h2 className="boutique-section-title mb-3">The Essentials</h2>
             <p className="text-brand-plum/70 max-w-xl mx-auto text-sm sm:text-base">
-              Our customers&apos; favourites, picked for you.
+              Our most-wanted pieces, chosen by men who know what looks good.
             </p>
           </AnimatedSection>
           <AnimatedGrid className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6 md:gap-8">

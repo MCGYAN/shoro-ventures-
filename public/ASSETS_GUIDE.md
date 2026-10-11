@@ -1,6 +1,6 @@
 # Asset Replacement Guide
 
-Every image in this folder is a neutral placeholder. Replace them with your own files (keep the same names), or regenerate the placeholders with `npm run assets:placeholder`.
+Logos, icons, favicons, the OG image and the hero background are generated from the Shoro Ventures SV monogram by `npm run assets:logo` (`scripts/generate-logo-assets.mjs`). `public/logo.svg` and `public/logo-mark.svg` are the vector masters for print, packaging and tags. Replace `hero.jpg` with a real lifestyle photo when available.
 
 | File | Size | Purpose |
 |------|------|---------|

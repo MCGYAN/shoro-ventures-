@@ -1,8 +1,8 @@
 import { ImageResponse } from 'next/og';
-import { SITE_NAME, SITE_HERO_TAGLINE, SITE_LOCATION_TAGLINE } from '@/lib/site-brand';
+import { SITE_NAME, SITE_TAGLINE, SITE_LOCATION_TAGLINE } from '@/lib/site-brand';
 
 export const runtime = 'edge';
-export const alt = `${SITE_NAME} - ${SITE_HERO_TAGLINE}`;
+export const alt = `${SITE_NAME} - ${SITE_TAGLINE}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -18,14 +18,15 @@ export default function OpenGraphImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(140deg, #f1f5f9 0%, #e2e8f0 55%, #f8fafc 100%)',
-          color: '#0f172a',
+          background: 'linear-gradient(140deg, #1E3D66 0%, #142B4A 55%, #0B1A2E 100%)',
+          color: '#FFFFFF',
           fontFamily: 'system-ui, sans-serif',
         }}
       >
-        <div style={{ fontSize: 64, fontWeight: 700, letterSpacing: '-0.02em' }}>{SITE_NAME}</div>
-        <div style={{ fontSize: 32, marginTop: 16, color: '#475569' }}>{SITE_HERO_TAGLINE}</div>
-        <div style={{ fontSize: 24, marginTop: 12, color: '#64748b' }}>{SITE_LOCATION_TAGLINE}</div>
+        <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>{SITE_NAME}</div>
+        <div style={{ width: 96, height: 4, marginTop: 24, background: '#D4AF37' }} />
+        <div style={{ fontSize: 32, marginTop: 24, color: '#D4AF37', letterSpacing: '0.2em', textTransform: 'uppercase' }}>{SITE_TAGLINE}</div>
+        <div style={{ fontSize: 24, marginTop: 14, color: '#F3F5F7' }}>{SITE_LOCATION_TAGLINE}</div>
       </div>
     ),
     { ...size }

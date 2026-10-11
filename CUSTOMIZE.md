@@ -1,29 +1,26 @@
 # Customization Checklist
 
-Complete these steps to make this project fully yours. Search the codebase for `YOUR_` and `yourdomain.com` to find anything left over.
+Shoro Ventures branding (name, colours, logo, copy, sample catalog) is applied. Search the codebase for `YOUR_`, `0000000000` and `yourdomain.com` to find what is left.
 
 ## Identity
 
-- [ ] Edit `lib/site-brand.ts` — replace all `YOUR_*` placeholders (name, description, taglines, hero copy, contact, address, socials, benefits, categories, reviews, about)
-- [ ] Update `BRAND_COLORS` in `lib/site-brand.ts`, then mirror in `app/globals.css`, `tailwind.config.js`, `public/manifest.json` and the `themeColor` / `theme-color` values in `app/layout.tsx`
-- [ ] Replace `yourdomain.com` in `.env.local` and deployment env
-- [ ] Update `package.json` name, author, homepage, repository URL
+- [x] Name, tagline, brand copy, colours and logo
+- [ ] In `lib/site-brand.ts`: phone, WhatsApp number, email, street address, city, social links
+- [ ] Replace `yourdomain.com` in `lib/site-brand.ts`, `.env.local`, `package.json` and deployment env
+- [ ] Update `package.json` homepage and repository URL
 
 ## Content
 
-- [ ] Replace the sample categories and products in `lib/mock-catalog.ts` (used until Supabase is connected)
-- [ ] Review page copy in `app/(store)/about/page.tsx`, `components/WhoWeAreSection.tsx` and `app/(store)/page.tsx`
+- [ ] Swap the sample menswear products in `lib/mock-catalog.ts` for real stock and prices (used until Supabase is connected)
+- [ ] Replace the sample customer reviews in `lib/site-brand.ts` with real ones
 - [ ] Review delivery prices, zones and timeframes in `app/(store)/shipping/page.tsx` and `app/(store)/faqs/page.tsx`
 - [ ] Review opening hours in `app/(store)/contact/page.tsx`
 
 ## Assets (see `/public/ASSETS_GUIDE.md`)
 
-- [ ] Replace `/public/logo.png`, `logo-header.png`, `logo-footer.png`, `logo-mark.png`
-- [ ] Replace `/public/favicon.ico`, `/app/favicon.ico`, `/public/favicon.png`
-- [ ] Replace `/public/apple-touch-icon.png`, `/public/icon-192.png`, `/public/icon-512.png`
-- [ ] Replace `/public/og-image.png` (1200×630px)
-- [ ] Replace `/public/hero.jpg` and update `HERO_SLIDES` alt text in `lib/site-brand.ts`
-- [ ] Optional: drop your logo at `/public/logo-source.png` and run `npm run assets:brand`
+- [x] Logo, icons, favicon and OG image (`npm run assets:logo`)
+- [ ] Replace `/public/hero.jpg` with a real lifestyle photo (currently a navy brand background)
+- [ ] Add product photos (via admin once Supabase is connected, or `image` fields in `lib/mock-catalog.ts`)
 
 ## Configuration
 

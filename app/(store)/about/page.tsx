@@ -26,15 +26,15 @@ export default function AboutPage() {
   const values = [
     {
       icon: 'ri-award-line',
-      title: 'Quality Products',
+      title: 'Uncompromising Quality',
       description:
-        'Every item we stock is carefully selected for quality, value and durability.',
+        'Quality leather, well-cut fabrics and solid construction, chosen to look sharp and last.',
     },
     {
       icon: 'ri-checkbox-circle-line',
-      title: 'Honest Service',
+      title: 'Comfort That Lasts',
       description:
-        'Clear prices, accurate descriptions and friendly advice, so you always know what you are getting.',
+        'Shoes and clothing designed to feel as good at the end of the day as they do first thing in the morning.',
     },
     {
       icon: 'ri-whatsapp-line',
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>{ABOUT_BODY}</p>
                 <p>
-                  Add a second paragraph here about your story, your values, or what makes your store different.
+                  We believe a man&apos;s appearance speaks before he does. That is why every pair of shoes and every piece of clothing we offer is chosen for a clean, timeless look and the comfort to carry it with confidence.
                 </p>
                 <div className="pt-4">
                   <Link
@@ -112,9 +112,9 @@ export default function AboutPage() {
             <div className="w-16 h-16 bg-pink-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
               <i className="ri-shopping-bag-3-line text-3xl text-white"></i>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Shoes &amp; Clothing</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Describe your main product range here, what you sell, what makes it special, and who it is for.
+              Formal shoes, sneakers, shirts and trousers for men, from boardroom-ready Oxfords to clean weekend essentials. Premium, versatile and built to last.
             </p>
           </div>
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
@@ -133,7 +133,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Customers Choose {siteName}</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Quality products, fair prices and service you can count on.</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Premium quality, clean design and comfort you can feel. Style that speaks.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
@@ -151,16 +151,16 @@ export default function AboutPage() {
 
       <div className="bg-gradient-to-br from-pink-50 via-white to-pink-50 py-24 border-y border-pink-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-900">
-          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Shop?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Upgrade Your Look?</h2>
           <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Browse our collection online, or WhatsApp us and we will help you find what you need.
+            Browse the collection online, or WhatsApp us and we will help you find the right fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center gap-3 bg-brand-plum text-brand-cream px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:bg-[#5C2349] hover:shadow-xl transform hover:-translate-y-1 transition-all"
+              className="inline-flex items-center justify-center gap-3 bg-brand-plum text-brand-cream px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:bg-[#1E3D66] hover:shadow-xl transform hover:-translate-y-1 transition-all"
             >
-              Shop now
+              Shop the collection
               <i className="ri-arrow-right-line"></i>
             </Link>
             <a

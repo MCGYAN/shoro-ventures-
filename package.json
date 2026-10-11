@@ -1,8 +1,8 @@
 {
-  "name": "storefront-template",
+  "name": "shoro-ventures",
   "version": "1.0.0",
-  "description": "Next.js + Supabase e-commerce storefront template with Moolre payments",
-  "author": "YOUR_NAME",
+  "description": "Shoro Ventures, men's shoes and clothing. Style That Speaks.",
+  "author": "Shoro Ventures",
   "license": "MIT",
   "homepage": "https://yourdomain.com",
   "repository": {
@@ -23,7 +23,7 @@
     "supabase:migrate": "supabase link --project-ref YOUR_SUPABASE_PROJECT_REF && supabase db push",
     "db:migrate": "node scripts/run-migration.mjs",
     "create-admin": "node scripts/create-admin-user.mjs",
-    "assets:placeholder": "node scripts/generate-placeholder-assets.mjs",
+    "assets:logo": "node scripts/generate-logo-assets.mjs",
     "assets:brand": "node scripts/process-brand-assets.mjs",
     "vercel": "vercel -Q ./.vercel-cli-config"
   },

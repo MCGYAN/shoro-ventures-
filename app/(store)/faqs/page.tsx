@@ -66,7 +66,7 @@ export default function FAQsPage() {
     {
       category: 'returns',
       question: 'Which items cannot be returned?',
-      answer: 'For hygiene reasons, we cannot accept returns on opened cosmetics, intimate apparel, earrings, or perishable goods. Custom or personalised items are also non-returnable unless defective.'
+      answer: 'For hygiene reasons, we cannot accept returns on worn shoes, underwear, socks, or items with removed tags. Custom or personalised items are also non-returnable unless defective.'
     },
     {
       category: 'returns',

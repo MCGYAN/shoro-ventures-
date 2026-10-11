@@ -21,7 +21,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#4A183D',
+  themeColor: '#142B4A',
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
@@ -118,12 +118,12 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         {/* PWA Meta Tags */}
-        <meta name="theme-color" content="#4A183D" />
+        <meta name="theme-color" content="#142B4A" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#4A183D" />
+        <meta name="msapplication-TileColor" content="#142B4A" />
         <meta name="msapplication-tap-highlight" content="no" />
 
         {/* FAVICON, add /public/favicon.ico and /public/apple-touch-icon.png */}

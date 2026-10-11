@@ -27,7 +27,7 @@ export default function NewsletterSection() {
     <div className="text-center">
       <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-plum mb-3 sm:mb-4 leading-snug">Stay In The Loop</h3>
       <p className="text-brand-plum/70 mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base">
-        Be the first to hear about new arrivals, special offers and store news.
+        Be the first to know when new shoes and styles drop, plus member-only offers.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
         <input
