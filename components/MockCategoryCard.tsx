@@ -18,13 +18,13 @@ export default function MockCategoryCard({ label, href, image = '', index = 0 }:
       href={href}
       className="group flex flex-col rounded-[1.25rem] overflow-hidden bg-white shadow-[0_6px_20px_-6px_rgba(20,43,74,0.25)] transition-all duration-500 active:scale-[0.97] md:rounded-2xl md:shadow-sm md:glass-card md:border md:border-white/40 boutique-card-hover"
     >
-      <div className="relative aspect-[3/4] bg-gradient-to-b from-brand-latte to-brand-champagne/60 boutique-image-zoom overflow-hidden">
+      <div className="relative aspect-[3/4] bg-gradient-to-b from-[#EEF1F5] to-[#DDE3EB] boutique-image-zoom overflow-hidden">
         {hasImage ? (
           <Image
             src={image}
             alt={label}
             fill
-            className="boutique-img-target object-cover object-center"
+            className="boutique-img-target object-contain px-4 pt-5 pb-[4.5rem] md:px-8 md:pt-8 md:pb-24 drop-shadow-[0_14px_18px_rgba(20,43,74,0.18)]"
             sizes="(max-width: 768px) 50vw, 25vw"
           />
         ) : (
@@ -36,14 +36,6 @@ export default function MockCategoryCard({ label, href, image = '', index = 0 }:
           </div>
         )}
 
-        {hasImage && (
-          <>
-            <span className="boutique-image-vignette" aria-hidden />
-            <span className="boutique-image-shine" aria-hidden />
-          </>
-        )}
-
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-brand-rose/25 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
         <div className="hidden md:flex absolute bottom-4 left-3 right-3 items-center justify-between gap-3 boutique-category-name-glass boutique-category-name-glass--overlay px-4 py-3">
           <span className="font-serif text-lg md:text-xl text-brand-plum tracking-wide">{label}</span>
           <span className="w-9 h-9 rounded-full bg-brand-rose/10 border border-brand-rose/25 flex items-center justify-center text-brand-rose shrink-0 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
@@ -51,15 +43,14 @@ export default function MockCategoryCard({ label, href, image = '', index = 0 }:
           </span>
         </div>
 
-        <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[rgba(10,22,40,0.82)] via-[rgba(10,22,40,0.1)] to-transparent" />
         <div className="md:hidden absolute inset-x-0 bottom-0 p-3.5 flex items-end justify-between gap-2">
           <div className="min-w-0">
             <span className="block text-[9px] font-semibold uppercase tracking-[0.24em] text-brand-gold mb-1">
               {String(index + 1).padStart(2, '0')}
             </span>
-            <span className="block font-serif text-[1.05rem] leading-tight text-white truncate">{label}</span>
+            <span className="block font-serif text-[1.05rem] leading-tight text-brand-plum truncate">{label}</span>
           </div>
-          <span className="w-8 h-8 shrink-0 rounded-full bg-white/15 border border-white/30 backdrop-blur-md flex items-center justify-center text-white">
+          <span className="w-8 h-8 shrink-0 rounded-full bg-brand-plum flex items-center justify-center text-brand-gold">
             <i className="ri-arrow-right-up-line text-sm" />
           </span>
         </div>
