@@ -56,13 +56,6 @@ export const SOCIAL_SNAPCHAT = '';
 export const DEFAULT_PRODUCT_BRAND = 'Shoro Ventures';
 export const CATALOG_PDF_PREFIX = 'shoro-ventures-catalog';
 
-export const FEATURED_BENEFITS = [
-  { label: 'Quality', title: 'Built To Last, Made To Impress' },
-  { label: 'Comfort', title: 'All-Day Wear Without Compromise' },
-  { label: 'Style', title: 'Clean, Contemporary, Timeless' },
-  { label: 'Service', title: 'Order Online Or On WhatsApp' },
-] as const;
-
 export const SHOP_CATEGORIES = [
   { label: 'Formal Shoes', href: '/shop?category=formal-shoes' },
   { label: 'Sneakers', href: '/shop?category=sneakers' },
